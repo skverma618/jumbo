@@ -7,7 +7,9 @@ const router = express.Router();
 
 // Middleware to verify JWT
 const authenticate = (req, res, next) => {
+    console.log("AUTHENTICATION MIDDLEWARE CALLED");
     const token = req.headers.authorization?.split(" ")[1];
+    console.log(token);
     if (!token) return res.status(401).json({ error: "Unauthorized" });
 
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
@@ -19,7 +21,9 @@ const authenticate = (req, res, next) => {
 
 // Start a new game session
 router.post("/game/start", authenticate, async (req, res) => {
+    console.log("START GAME ROUTE CALLED");
     const userId = req.userId;
+
     let game = await Game.findOne({ completed: false, players: { $size: 1 } });
 
     if (!game) {
