@@ -71,7 +71,7 @@ module.exports = (io) => {
 
             userGame.ready = false;
             gameRoom.currentQuestion += 1;
-
+            sendNextQuestion(gameId, io, gameRoom);
             if (gameRoom.currentQuestion < game.questions.length) {
                 io.to(gameId).emit("game:ready");
             } else {

@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     socket.on("question:send", (data) => {
       setQuestion(data);
-      setIsReady(false);
+      // setIsReady(false);
     });
 
     socket.on("game:ready", () => {
