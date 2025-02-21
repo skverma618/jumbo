@@ -31,7 +31,7 @@ router.post("/game/start", authenticate, async (req, res) => {
         const questions = await Question.aggregate([{ $sample: { size: 4 } }]);
         game = new Game({ players: [userId], questions });
         await game.save();
-        return res.json({ message: "Waiting for another player..." });
+        return res.json({ gameId: game._id, message: "Waiting for another player..." });
     }
 
     // Add second player and start game

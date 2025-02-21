@@ -7,6 +7,7 @@ const { Server } = require("socket.io");
 
 const authRoutes = require("./routes/authRoutes");
 const gameRoutes = require("./routes/gameRoutes");
+const questionRoutes = require("./routes/questionRoutes");
 const gameSocket = require("./websockets/gameSocket")
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 app.use("/api", authRoutes);
 app.use("/api", gameRoutes);
+app.use("/api", questionRoutes);
 
 gameSocket(io);
 
