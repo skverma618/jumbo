@@ -41,5 +41,4 @@ MONGO_URI:
     user1 -> { "username": "player1", "email": "player1@example.com", "password": "password123" }
     user2 -> { "username": "player2", "email": "player2@example.com", "password": "password123" }
 
-
-After this, you may try loogin in and playing game through UI itself
+After this, you may try login in and playing game through UI itself
