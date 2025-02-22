@@ -33,12 +33,16 @@ MONGO_URI:
    npm run dev
    ```
    App will run on http://localhost:5173/
+
    (NOTE: as of now, it does not have a register route on frontend, so please try creating two user through postman). After that, login and game play works great.
 
 ## 4. Use POSTMAN for Registreing user please:
    url - http://localhost:3000/api/register (post request)
+
    body:
+
     user1 -> { "username": "player1", "email": "player1@example.com", "password": "password123" }
+    
     user2 -> { "username": "player2", "email": "player2@example.com", "password": "password123" }
 
 After this, you may try login in and playing game through UI itself
