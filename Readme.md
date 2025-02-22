@@ -17,7 +17,7 @@ MONGO_URI:
    cd jumbo
    ```
 
-## 2. Terminal 1
+## 2. Terminal 1 (Run API)
    ```bash
    cd api
    npm install
@@ -26,7 +26,7 @@ MONGO_URI:
 
    It will run on post 3000
 
-## 3. Terminal 2
+## 3. Terminal 2 (Run React Client)
    ```bash
    cd client
    npm install
@@ -42,7 +42,7 @@ MONGO_URI:
    body:
 
     user1 -> { "username": "player1", "email": "player1@example.com", "password": "password123" }
-    
+
     user2 -> { "username": "player2", "email": "player2@example.com", "password": "password123" }
 
 After this, you may try login in and playing game through UI itself
