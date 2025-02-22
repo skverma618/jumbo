@@ -85,9 +85,21 @@ export default function App() {
     <div className="p-4" style={{ backgroundColor: 'gray', padding: '10vh 30vw', marginTop: "10vh", fontFamily: 'Arial, sans-serif' }}>
       {!token ? (
         <div>
-          <input placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={login}>Login</button>
+          <input style={{
+            padding: '6px 6px',
+            fontSize: '18px',
+          }} placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input style={{
+            padding: '6px 6px',
+            fontSize: '18px',
+          }} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <button style={{
+            margin: '5px', 
+            padding: '10px',
+            border: 'none', 
+            borderRadius: '5px', 
+            cursor: 'pointer'
+          }} onClick={login}>Login</button>
         </div>
       ) : gameId ? (
         <div>
